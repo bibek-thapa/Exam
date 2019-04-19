@@ -22,9 +22,9 @@
 
 
 
-#calendarTable td,th{
+/*#calendarTable td,th{
   border: 1px solid black;
-}
+}*/
 
 #calendarTable td
 {
@@ -38,4 +38,5 @@
 #monthHeader,#yearHeader {
   font-family: "Times New Roman", Times, serif;
   font-size: 50px;
+  text-align:center;
 }
