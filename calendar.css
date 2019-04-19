@@ -1,0 +1,41 @@
+
+#calendarTable {
+    border: 1px solid black;
+}
+
+
+#rightArrow
+{
+
+	height: 50px;
+	width:50px;
+
+}
+
+#leftArrow
+{
+
+	height: 50px;
+	width:50px;
+
+}
+
+
+
+#calendarTable td,th{
+  border: 1px solid black;
+}
+
+#calendarTable td
+{
+	
+  font-family: "Georgia", serif;
+  text-align:center;
+  
+}
+
+
+#monthHeader,#yearHeader {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 50px;
+}
