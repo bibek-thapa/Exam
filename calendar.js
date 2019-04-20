@@ -34,9 +34,12 @@ var update = function (date) {
    console.log(daysInCurrentMonth);
 
    var tcell=document.querySelectorAll("#calendarTable td");
-   tcell[1].innerHTML=1;
+
+   var day = date.getDay();
+   console.log(day);
+   
     var j=1;
-    for(var i=0;i<tcell.length;i++)
+    for(var i=day;i<tcell.length;i++)
     {
        
         if(j<=daysInCurrentMonth)
@@ -73,6 +76,19 @@ var update = function (date) {
         nextMonth = 0;
         year=year+1;
     }
+
+     var j=1;
+    for(var i=day;i<tcell.length;i++)
+    {
+       
+        if(j<=daysInCurrentMonth)
+        {
+            tcell[i].innerHTML="";
+            j=j+1;
+        }
+
+    }
+
         date.setFullYear(year);
         date.setMonth(nextMonth);
         update(date);
@@ -82,6 +98,18 @@ var update = function (date) {
 
     var previousMonthis=function()
     {
+
+         var j=1;
+    for(var i=day;i<tcell.length;i++)
+    {
+       
+        if(j<=daysInCurrentMonth)
+        {
+            tcell[i].innerHTML="";
+            j=j+1;
+        }
+
+    }
         
         date.setFullYear(year);
         date.setMonth(previousMonth);

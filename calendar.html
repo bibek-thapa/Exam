@@ -102,17 +102,30 @@
             <td><input id="form_year" type="text" class="form-control form-control-sm"/></td>
         </tr>
 
-        <tr><td></td><td><input type="submit" value="Submit" onsubmit="dateUpdate()" /></td></tr>
+        <tr><td></td><td><input type="submit" id="sumit" onclick="getValue()" /></td></tr>
     </table>
 </form>
 
 
 <script>
     // show the current month.
-    var date = new Date(); 
-    update(date);
+var tmp_year="global";
+    var tmp_month;
+var getValue = function(){
    
-    
+            var year=document.getElementById("form_year").value;
+            var month= document.getElementById("form_month").value;
+            return[year,month];
+   
+ };   
+ var value = getValue();
+ console.log(value[0]);
+ console.log(value[1]);
+
+ console.log(tmp_year);
+    console.log(tmp_month);
+  var date = new Date(2019,4); 
+  update(date);
    
 </script>
 
