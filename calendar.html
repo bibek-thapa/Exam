@@ -86,7 +86,7 @@
         <td><img id="rightArrow" src="RArrow.png"/></td>
 </table>
 
-<form id="the_form">
+<form id="the_form" onsubmit="return false">
     <table class="form-group">
         <tr>
             <td>Month:</td>
@@ -102,30 +102,35 @@
             <td><input id="form_year" type="text" class="form-control form-control-sm"/></td>
         </tr>
 
-        <tr><td></td><td><input type="submit" id="sumit" onclick="getValue()" /></td></tr>
+        <tr><td></td><td><input type="submit" id="sumit"  value="Submit"/></td></tr>
     </table>
 </form>
+
+<p id="year"></p>
+<p id="month"></p>
 
 
 <script>
     // show the current month.
-var tmp_year="global";
-    var tmp_month;
-var getValue = function(){
+    var btn=document.getElementById("sumit");
+    
+    var getValue = function(){
    
             var year=document.getElementById("form_year").value;
-            var month= document.getElementById("form_month").value;
-            return[year,month];
-   
- };   
- var value = getValue();
- console.log(value[0]);
- console.log(value[1]);
+            var month= document.getElementById("form_month").value-1;
+            console.log(month);
+            console.log(year);
+            var date = new Date(year,month); 
+            update(date);
 
- console.log(tmp_year);
-    console.log(tmp_month);
-  var date = new Date(2019,4); 
-  update(date);
+
+ };  
+
+ 
+btn.addEventListener("click",getValue);
+  
+
+
    
 </script>
 

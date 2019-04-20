@@ -31,12 +31,12 @@ var update = function (date) {
    
     
 
-   console.log(daysInCurrentMonth);
+   
 
    var tcell=document.querySelectorAll("#calendarTable td");
 
    var day = date.getDay();
-   console.log(day);
+   
    
     var j=1;
     for(var i=day;i<tcell.length;i++)
